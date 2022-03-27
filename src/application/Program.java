@@ -25,6 +25,10 @@ public class Program {
 				System.out.print("Posicao inicial: ");
 				ChessPosition source = UI.readChessPosition(ler);
 				
+				boolean[][] possibleMoves = chessMatch.possibleMoves(source);
+				UI.clearScreen();
+				UI.printBoard(chessMatch.getPieces(), possibleMoves);
+				
 				System.out.println();
 				System.out.print("Posicao desejada: ");
 				ChessPosition target = UI.readChessPosition(ler);
